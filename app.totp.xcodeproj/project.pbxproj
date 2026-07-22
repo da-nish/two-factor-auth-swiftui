@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CEF824512E0199DD006BE23A /* Base32 in Frameworks */ = {isa = PBXBuildFile; productRef = CEF824502E0199DD006BE23A /* Base32 */; };
+		CEF824592E0284C2006BE23A /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = CEF824582E0284C2006BE23A /* SwiftOTP */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CEF8242F2E018F76006BE23A /* app.totp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.totp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF824592E0284C2006BE23A /* SwiftOTP in Frameworks */,
+				CEF824512E0199DD006BE23A /* Base32 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = app.totp;
 			packageProductDependencies = (
+				CEF824502E0199DD006BE23A /* Base32 */,
+				CEF824582E0284C2006BE23A /* SwiftOTP */,
 			);
 			productName = app.totp;
 			productReference = CEF8242F2E018F76006BE23A /* app.totp.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = CEF824262E018F76006BE23A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CEF8244F2E0199DD006BE23A /* XCRemoteSwiftPackageReference "Base32" */,
+				CEF824572E0284C2006BE23A /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEF824302E018F76006BE23A /* Products */;
 			projectDirPath = "";
@@ -258,6 +271,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -285,6 +299,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,6 +336,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEF8244F2E0199DD006BE23A /* XCRemoteSwiftPackageReference "Base32" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattrubin/Base32";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		CEF824572E0284C2006BE23A /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEF824502E0199DD006BE23A /* Base32 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF8244F2E0199DD006BE23A /* XCRemoteSwiftPackageReference "Base32" */;
+			productName = Base32;
+		};
+		CEF824582E0284C2006BE23A /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF824572E0284C2006BE23A /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF824272E018F76006BE23A /* Project object */;
 }
